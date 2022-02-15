@@ -25,7 +25,7 @@ body.groups-page{
         }
     }
     // ------ CSS Moved From The "my component - common.scss" [Date: 15-02-2022] ------------
-    .groups-page #main-outlet::before {
+    #main-outlet::before {
         content: "Let's improve your experience. Join the product groups you are interested in to receive content notifications that are relevant for you.";
         font-size: 2em;
         display: block;
