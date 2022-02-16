@@ -24,6 +24,21 @@ body.groups-page{
             }
         }
     }
+    // ------ CSS Moved From The "my component - common.scss" [Date: 15-02-2022] ------------
+    #main-outlet::before {
+        content: "Let's improve your experience. Join the product groups you are interested in to receive content notifications that are relevant for you.";
+        font-size: 2em;
+        display: block;
+    }
+    
+    .groups-boxes .group-box.Cumulocity-IoT {
+        order: -2;
+    }
+    
+    .groups-boxes .group-box.webMethods {
+        order: -1;
+    }
+    // ------ End of CSS Moved From The "my component" ------------
 
     // Modified the below Selector property to change the grid layout and background of the group-boxes and also Join buttons [Modified By: Saurabh, Date: 11/05/2021]
     // Make the Join button wider and increate the font within the group box on groups page.
