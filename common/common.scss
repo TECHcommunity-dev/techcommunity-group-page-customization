@@ -31,12 +31,15 @@ body.groups-page{
         display: block;
     }
     
-    .groups-boxes .group-box.Cumulocity-IoT {
-        order: -2;
-    }
-    
-    .groups-boxes .group-box.webMethods {
-        order: -1;
+    // Fix the issue that occurred on the Groups page due to the Discourse update (https://github.com/discourse/discourse/commit/63886379316a1253510b2050e285c8405a140dc1) [Added By: Saurabh, Date: 31/10/2022]
+    // Modify the Cumulocity-IoT/webMethods group-box elements selector
+    .groups-boxes {
+        .group-box[data-group-name="Cumulocity-IoT"] {
+            order: -2;
+        }
+        .group-box[data-group-name="webMethods"] {
+            order: -1;
+        }
     }
     // ------ End of CSS Moved From The "my component" ------------
 
@@ -127,13 +130,21 @@ body.groups-page{
 
 // Hiding downloads group for non-staff members.
 // Modified to hide moderators group [Added By: Saurabh, Date: 11/05/2021]
+// Hide the groups whoes name start with Private for the non-staff members [Added By: Saurabh, Date: 31/10/2022]
 body.groups-page:not(.staff) {
     .groups-boxes{
-        .group-box.Downloads, .group-box.moderators{
+        // Fix the issue that occurred on the Groups page due to the Discourse update (https://github.com/discourse/discourse/commit/63886379316a1253510b2050e285c8405a140dc1) [Added By: Saurabh, Date: 31/10/2022]
+        // Modify the Downloads/moderators group-box elements selector And hide the groups whose name start with "Private"
+        .group-box[data-group-name="Downloads"], 
+        .group-box[data-group-name="moderators"],
+        .group-box[data-group-name^="Private"],
+        .group-box[data-group-name^="private"]
+        {
             display: none;
         } 
     }
 }
+
 
 // CSS for modifying Downloads group page [Added By: Saurabh, Date: 07/05/2021]
 // Modified to make buttons bigger on all the group details page [Modified By: Saurabh, Date: 25/05/2021]
