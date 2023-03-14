@@ -6,6 +6,7 @@ export default {
         
         // Override the showRequestMembershipForm method to auto-fill current User information for the membership request textarea field for the Downloads group. [Added By: Saurabh, Date: 31/05/2021]
         api.modifyClass("component:group-membership-button", { 
+            pluginId: 'techcommunity-group-membership-button',
             checkNull(value){
                 if(typeof(value) != "undefined" && value != null && value !='null'){
                     return value;
@@ -81,6 +82,7 @@ export default {
         });
         // Override the didInsertElement method of d-modal-body component to hide the Label and Textarea for the Request to downloads group dialog [Added by: Saurabh; Date: 24/06/2021]
         api.modifyClass("component:d-modal-body", {
+            pluginId: 'techcommunity-d-modal-body',
             didInsertElement() {
               //Called super class didInsertElement method to grab the changes in discourse core.
               this._super(...arguments);

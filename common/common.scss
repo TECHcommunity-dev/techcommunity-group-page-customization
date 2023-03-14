@@ -130,7 +130,7 @@ body.groups-page{
 
 // Hiding downloads group for non-staff members.
 // Modified to hide moderators group [Added By: Saurabh, Date: 11/05/2021]
-// Hide the groups whoes name start with Private for the non-staff members [Added By: Saurabh, Date: 31/10/2022]
+// Hide the groups whose name start with Private for the non-staff members [Added By: Saurabh, Date: 31/10/2022]
 body.groups-page:not(.staff) {
     .groups-boxes{
         // Fix the issue that occurred on the Groups page due to the Discourse update (https://github.com/discourse/discourse/commit/63886379316a1253510b2050e285c8405a140dc1) [Added By: Saurabh, Date: 31/10/2022]
