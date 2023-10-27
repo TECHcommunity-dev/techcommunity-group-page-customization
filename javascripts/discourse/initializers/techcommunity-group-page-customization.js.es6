@@ -29,6 +29,7 @@ export default {
                         type: 'GET',
                         url: fulllinktojson,
                         dataType: 'json',
+                        async: false, /* Binjan; 2023.10.27 */
                         success: function(json) {
                             //Getting user-fields id to fetch user-fields of the current data
                             let countryFieldObj = userFields.find(obj => obj.name.toLowerCase() == ("Country").toLowerCase());
